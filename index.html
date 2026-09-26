@@ -1,128 +1,129 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-<meta name="theme-color" content="#071521"/>
-<title>목포·해남·완도 수산물 단가</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071521">
+<title>수산물 도매가격 · 목포 해남 완도</title>
 <style>
-:root{--bg:#06111b;--card:#0d1d2a;--card2:#102536;--line:#1d3a4e;--text:#f2f8fb;--muted:#9cb4c3;--accent:#40d3c3;--accent2:#6aaeff;--danger:#ff7171;--ok:#7be0a7}
-*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;background:linear-gradient(180deg,#04101a,#092031 55%,#06111b);color:var(--text);min-height:100vh}
-.wrap{max-width:1100px;margin:auto;padding:18px 14px 42px}.hero{padding:18px 4px 12px}.kicker{color:var(--accent);font-weight:800;font-size:13px;letter-spacing:.08em}.hero h1{font-size:clamp(25px,6vw,43px);margin:7px 0 8px;line-height:1.12}.hero p{color:var(--muted);margin:0;line-height:1.5}
-.toolbar,.card{background:rgba(13,29,42,.93);border:1px solid var(--line);border-radius:18px;box-shadow:0 14px 40px #0004}.toolbar{padding:14px;margin:12px 0;display:grid;grid-template-columns:1.2fr 1.8fr auto;gap:10px;align-items:end}
-label{font-size:12px;color:var(--muted);font-weight:700;display:block;margin-bottom:6px}select,button{width:100%;border:1px solid #294a60;background:#0a1722;color:var(--text);border-radius:12px;padding:11px 12px;font-size:15px}
-button{background:linear-gradient(135deg,#19aa9d,#257cc9);font-weight:800;border:0;cursor:pointer}.status{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:13px;margin:10px 2px 15px}.dot{width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px #7be0a71a}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.metric{padding:16px}.metric .t{color:var(--muted);font-size:12px}.metric .v{font-weight:900;font-size:clamp(20px,4vw,30px);margin-top:6px}.metric .s{color:var(--muted);font-size:12px;margin-top:4px}
-.section{margin-top:14px}.section h2{font-size:18px;margin:0 0 9px 3px}.tablebox{overflow:auto;border-radius:18px;border:1px solid var(--line)}table{width:100%;border-collapse:collapse;background:#0b1a26;min-width:780px}th,td{padding:11px 10px;border-bottom:1px solid #163245;text-align:left;font-size:13px;white-space:nowrap}th{color:#bcd1dd;background:#102535;position:sticky;top:0}td.price{font-weight:900;color:#e8fbf9}.empty{padding:32px;text-align:center;color:var(--muted)}.chips{display:flex;gap:7px;flex-wrap:wrap}.chip{border:1px solid #285065;background:#0a1b27;color:#cde0ea;padding:8px 10px;border-radius:999px;font-size:13px;cursor:pointer}.chip.on{background:#123e49;border-color:#35bcb0;color:#fff}
-.note{margin-top:16px;padding:14px 16px;color:var(--muted);font-size:12px;line-height:1.6}.note a{color:#8bc7ff}.warning{color:#ffd58a}
-@media(max-width:760px){.toolbar{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.metric{padding:13px}.wrap{padding-left:11px;padding-right:11px}}
+:root{--bg:#06111b;--card:#0c1c29;--card2:#102838;--line:#1d3b4f;--txt:#f6fbfe;--muted:#9eb7c7;--mint:#3ed2c1;--blue:#65a9ff;--warn:#ffd27f}
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;background:linear-gradient(180deg,#04101a,#0a2233 55%,#06111b);color:var(--txt);min-height:100vh}
+.wrap{max-width:1100px;margin:auto;padding:18px 12px 44px}.hero{padding:14px 3px}.eyebrow{font-size:12px;color:var(--mint);font-weight:900;letter-spacing:.08em}.hero h1{font-size:clamp(27px,7vw,45px);margin:7px 0 8px;line-height:1.08}.hero p{margin:0;color:var(--muted);line-height:1.55}
+.card{background:rgba(12,28,41,.95);border:1px solid var(--line);border-radius:18px;box-shadow:0 14px 40px #0004}.toolbar{display:grid;grid-template-columns:1fr auto;gap:10px;padding:12px;margin:10px 0}
+select,button{border:1px solid #2c5067;background:#091722;color:var(--txt);border-radius:12px;padding:12px;font-size:15px}button{border:0;background:linear-gradient(135deg,#19a99b,#267ac8);font-weight:900;cursor:pointer}
+.status{font-size:13px;color:var(--muted);margin:10px 3px 14px}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#77dfa4;margin-right:7px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.metric{padding:15px}.metric .k{font-size:12px;color:var(--muted)}.metric .v{font-size:clamp(21px,5vw,31px);font-weight:950;margin-top:6px}.metric .s{font-size:11px;color:var(--muted);margin-top:5px}
+.section{margin-top:16px}.title{display:flex;justify-content:space-between;gap:12px;align-items:end;margin:0 3px 9px}.title h2{font-size:19px;margin:0}.title small{color:var(--muted);text-align:right}.tablebox{border:1px solid var(--line);border-radius:18px;overflow:auto}table{width:100%;border-collapse:collapse;background:#0a1925;min-width:760px}th,td{padding:11px 10px;border-bottom:1px solid #173346;font-size:13px;text-align:left;white-space:nowrap}th{background:#102737;color:#c5d9e5;position:sticky;top:0}td.price{font-weight:900;color:#ecfffc}.empty{padding:28px;text-align:center;color:var(--muted)}
+.badge{display:inline-block;padding:5px 8px;border-radius:999px;background:#103847;border:1px solid #246073;font-size:11px;color:#dff}
+.note{margin-top:14px;padding:14px 16px;color:var(--muted);font-size:12px;line-height:1.6}.note b{color:#eaf5fa}.warn{color:var(--warn)}
+a{color:#92c9ff}
+@media(max-width:720px){.grid{grid-template-columns:1fr 1fr}.toolbar{grid-template-columns:1fr}.metric{padding:13px}.wrap{padding-left:10px;padding-right:10px}.hero h1{font-size:30px}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="hero">
-    <div class="kicker">SEAFOOD MARKET WATCH</div>
-    <h1>목포·해남·완도<br/>수산물 최신 위판 단가</h1>
-    <p>문어·낙지·전복·꽃게 등 공개 위판자료를 kg당 가격으로 계산해 한눈에 봅니다.</p>
+    <div class="eyebrow">OFFICIAL SEAFOOD PRICE</div>
+    <h1>수산물 도매가격<br>목포·해남·완도 현지가</h1>
+    <p><b>도매가격은 KAMIS 중도매인 판매가격</b>, 목포·해남·완도는 KMI 공개 위판가로 따로 표시합니다.</p>
   </div>
 
-  <div class="toolbar">
-    <div>
-      <label>지역</label>
-      <select id="region"><option value="전체">전체</option><option>목포</option><option>해남</option><option>완도</option></select>
-    </div>
-    <div>
-      <label>품목</label>
-      <div id="chips" class="chips"></div>
-    </div>
-    <div><button id="reload">새로고침</button></div>
+  <div class="card toolbar">
+    <select id="item"><option>데이터 불러오는 중…</option></select>
+    <button id="reload">새로고침</button>
   </div>
 
-  <div class="status"><span class="dot"></span><span id="status">데이터 확인 중…</span></div>
+  <div class="status"><span class="dot"></span><span id="status">최신 공식자료 확인 중…</span></div>
 
   <div class="grid">
-    <div class="card metric"><div class="t">가중 평균</div><div id="avg" class="v">-</div><div class="s">총금액 ÷ 총중량</div></div>
-    <div class="card metric"><div class="t">최저 단가</div><div id="min" class="v">-</div><div class="s">개별 거래 기준</div></div>
-    <div class="card metric"><div class="t">최고 단가</div><div id="max" class="v">-</div><div class="s">개별 거래 기준</div></div>
-    <div class="card metric"><div class="t">최근 거래량</div><div id="weight" class="v">-</div><div id="date" class="s">-</div></div>
+    <div class="card metric"><div class="k">도매 최신가</div><div class="v" id="wNow">-</div><div class="s" id="wUnit">KAMIS</div></div>
+    <div class="card metric"><div class="k">이전 가격</div><div class="v" id="wPrev">-</div><div class="s">직전 조사값</div></div>
+    <div class="card metric"><div class="k">변동</div><div class="v" id="wChange">-</div><div class="s">최신 vs 이전</div></div>
+    <div class="card metric"><div class="k">현지 최근 평균</div><div class="v" id="lAvg">-</div><div class="s" id="lDate">목포·해남·완도</div></div>
   </div>
 
   <div class="section">
-    <h2>지역별 최신 단가</h2>
+    <div class="title"><h2>KAMIS 도매가격</h2><small>중도매인 판매가격<br>공식 공개자료</small></div>
     <div class="tablebox"><table>
-      <thead><tr><th>지역</th><th>품목</th><th>최신일</th><th>평균/kg</th><th>최저/kg</th><th>최고/kg</th><th>총중량</th><th>거래</th></tr></thead>
-      <tbody id="summary"></tbody>
+      <thead><tr><th>품목</th><th>품종</th><th>등급</th><th>기준단위</th><th>최신가</th><th>원/kg</th><th>이전가</th><th>기준일</th></tr></thead>
+      <tbody id="wRows"></tbody>
     </table></div>
   </div>
 
   <div class="section">
-    <h2>최근 위판 거래</h2>
+    <div class="title"><h2>목포·해남·완도 현지 위판가</h2><small>도매가격과 별도<br>KMI 공개 위판자료</small></div>
     <div class="tablebox"><table>
-      <thead><tr><th>일자</th><th>지역</th><th>산지조합</th><th>위판장</th><th>품목</th><th>상태</th><th>중량</th><th>금액</th><th>원/kg</th></tr></thead>
-      <tbody id="rows"></tbody>
+      <thead><tr><th>일자</th><th>지역</th><th>산지조합</th><th>품목</th><th>상태</th><th>중량</th><th>금액</th><th>원/kg</th></tr></thead>
+      <tbody id="lRows"></tbody>
     </table></div>
   </div>
 
   <div class="card note">
-    <b>가격 기준</b> · 원/kg = 거래금액 ÷ 중량. 같은 품목도 크기·상태·품질·어업 방식에 따라 가격 차이가 큽니다.<br/>
-    <span class="warning">초 단위 실시간 시세가 아니라 KMI에 반영된 가장 최근 공개 위판자료입니다.</span>
-    · <a href="https://fishdata.kmi.re.kr/front/kmisys/prdlcCttmltDataList.do" target="_blank" rel="noopener">KMI 원자료 보기</a>
+    <b>가격 기준</b> · KAMIS 도매가격은 도매시장 중도매인 상회가 소상인·실수요자에게 판매하는 조사 가격입니다.
+    <span class="warn">초 단위 실시간 가격이 아니라 공식 공개자료 기준 최신 시세입니다.</span>
+    현지 위판가는 거래 품질·크기·상태에 따라 차이가 큽니다.<br>
+    <a href="https://www.kamis.or.kr/customer/price/wholesale/catalogue.do" target="_blank" rel="noopener">KAMIS 원자료</a>
+    · <a href="https://fishdata.kmi.re.kr/front/kmisys/prdlcCttmltDataList.do" target="_blank" rel="noopener">KMI 원자료</a>
   </div>
 </div>
 <script>
-const ITEMS=["문어","낙지","전복","꽃게","갈치","민어","병어","참돔","농어","우럭","붕장어","갑오징어","오징어","새우","키조개","바지락","굴","멸치"];
-let DATA={updated_at:null, rows:[]}; let selected="문어";
-const won=n=>Number.isFinite(n)?Math.round(n).toLocaleString("ko-KR")+"원":"-";
-const kg=n=>Number.isFinite(n)?Number(n).toLocaleString("ko-KR",{maximumFractionDigits:1})+"kg":"-";
-function makeChips(){
- const box=document.querySelector("#chips"); box.innerHTML="";
- ITEMS.forEach(x=>{const b=document.createElement("button");b.className="chip"+(x===selected?" on":"");b.textContent=x;b.onclick=()=>{selected=x;makeChips();render()};box.appendChild(b)})
+let DATA={wholesale:[],local:[]};
+const $=s=>document.querySelector(s);
+const won=n=>Number.isFinite(+n)?Math.round(+n).toLocaleString("ko-KR")+"원":"-";
+const kg=n=>Number.isFinite(+n)?Number(n).toLocaleString("ko-KR",{maximumFractionDigits:1})+"kg":"-";
+function items(){
+ const set=new Set();
+ (DATA.wholesale||[]).forEach(x=>set.add(x.item));
+ (DATA.local||[]).forEach(x=>set.add(x.item));
+ const arr=[...set].sort((a,b)=>a.localeCompare(b,"ko"));
+ const sel=$("#item"), old=sel.value; sel.innerHTML="";
+ if(!arr.length){sel.innerHTML="<option>현재 공개 데이터 없음</option>";return}
+ arr.forEach(x=>{const o=document.createElement("option");o.value=x;o.textContent=x;sel.appendChild(o)});
+ if(arr.includes(old))sel.value=old; else sel.value=arr.includes("전복")?"전복":arr[0];
 }
-function filtered(){
- const r=document.querySelector("#region").value;
- return (DATA.rows||[]).filter(x=>(r==="전체"||x.region===r)&&x.item.includes(selected));
+function selected(){return $("#item").value}
+function render(){
+ const item=selected();
+ const wr=(DATA.wholesale||[]).filter(x=>x.item===item);
+ const lr=(DATA.local||[]).filter(x=>x.item.includes(item)||item.includes(x.item));
+ const w=wr[0];
+ $("#wNow").textContent=w?(w.kg_price?won(w.kg_price)+"/kg":won(w.price)):"-";
+ $("#wPrev").textContent=w?(w.previous_kg_price?won(w.previous_kg_price)+"/kg":won(w.previous_price)):"-";
+ if(w && Number.isFinite(+w.price) && Number.isFinite(+w.previous_price) && +w.previous_price!==0){
+   const d=(+w.price-+w.previous_price)/+w.previous_price*100;
+   $("#wChange").textContent=(d>0?"+":"")+d.toFixed(1)+"%";
+ }else $("#wChange").textContent="-";
+ $("#wUnit").textContent=w?(w.unit+" · "+w.rank):"KAMIS";
+
+ const latest=lr.length?[...lr].sort((a,b)=>b.date.localeCompare(a.date))[0].date:null;
+ const day=latest?lr.filter(x=>x.date===latest):[];
+ const tw=day.reduce((a,b)=>a+(+b.weight||0),0), ta=day.reduce((a,b)=>a+(+b.amount||0),0);
+ $("#lAvg").textContent=tw?won(ta/tw)+"/kg":"-";
+ $("#lDate").textContent=latest?"최근 "+latest:"현지 공개 거래 없음";
+
+ const wt=$("#wRows"); wt.innerHTML="";
+ if(!wr.length) wt.innerHTML='<tr><td colspan="8" class="empty">선택한 품목의 KAMIS 도매가격이 현재 공개되지 않았습니다.</td></tr>';
+ else wr.forEach(x=>wt.insertAdjacentHTML("beforeend",'<tr><td><b>'+x.item+'</b></td><td>'+(x.kind||"-")+'</td><td><span class="badge">'+(x.rank||"-")+'</span></td><td>'+x.unit+'</td><td class="price">'+won(x.price)+'</td><td class="price">'+(x.kg_price?won(x.kg_price):"-")+'</td><td>'+won(x.previous_price)+'</td><td>'+x.date+'</td></tr>'));
+
+ const lt=$("#lRows"); lt.innerHTML="";
+ const view=[...lr].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,100);
+ if(!view.length) lt.innerHTML='<tr><td colspan="8" class="empty">선택한 품목의 목포·해남·완도 공개 위판 거래가 없습니다.</td></tr>';
+ else view.forEach(x=>lt.insertAdjacentHTML("beforeend",'<tr><td>'+x.date+'</td><td>'+x.region+'</td><td>'+x.union+'</td><td><b>'+x.item+'</b></td><td>'+(x.state||"-")+'</td><td>'+kg(x.weight)+'</td><td>'+won(x.amount)+'</td><td class="price">'+won(x.kg_price)+'</td></tr>'));
 }
-function latestOnly(rows){
- if(!rows.length) return [];
- const latest=[...rows].sort((a,b)=>String(b.date).localeCompare(String(a.date)))[0].date;
- return rows.filter(x=>x.date===latest);
-}
-function metrics(rows){
- const x=latestOnly(rows); const w=x.reduce((a,b)=>a+(+b.weight||0),0), money=x.reduce((a,b)=>a+(+b.amount||0),0);
- const ps=x.map(r=>+r.kg_price).filter(Number.isFinite);
- document.querySelector("#avg").textContent=w?won(money/w):"-";
- document.querySelector("#min").textContent=ps.length?won(Math.min(...ps)):"-";
- document.querySelector("#max").textContent=ps.length?won(Math.max(...ps)):"-";
- document.querySelector("#weight").textContent=w?kg(w):"-";
- document.querySelector("#date").textContent=x[0]?"최신 "+x[0].date:"거래 없음";
-}
-function summary(rows){
- const tb=document.querySelector("#summary");tb.innerHTML="";
- const groups={};
- rows.forEach(r=>{const k=r.region+"|"+r.item;(groups[k]??=[]).push(r)});
- const out=[];
- Object.values(groups).forEach(g=>{const latest=[...g].sort((a,b)=>String(b.date).localeCompare(String(a.date)))[0]?.date;if(!latest)return;
-   const x=g.filter(r=>r.date===latest), w=x.reduce((a,b)=>a+(+b.weight||0),0),m=x.reduce((a,b)=>a+(+b.amount||0),0),p=x.map(r=>+r.kg_price).filter(Number.isFinite);
-   out.push({region:x[0].region,item:x[0].item,date:latest,avg:w?m/w:NaN,min:p.length?Math.min(...p):NaN,max:p.length?Math.max(...p):NaN,w,n:x.length});
- });
- out.sort((a,b)=>b.date.localeCompare(a.date)||a.region.localeCompare(b.region));
- if(!out.length){tb.innerHTML='<tr><td colspan="8" class="empty">선택한 조건의 거래가 없습니다.</td></tr>';return}
- out.forEach(x=>tb.insertAdjacentHTML("beforeend",'<tr><td>'+x.region+'</td><td><b>'+x.item+'</b></td><td>'+x.date+'</td><td class="price">'+won(x.avg)+'</td><td>'+won(x.min)+'</td><td>'+won(x.max)+'</td><td>'+kg(x.w)+'</td><td>'+x.n+'건</td></tr>'));
-}
-function raw(rows){
- const tb=document.querySelector("#rows");tb.innerHTML="";
- const x=[...rows].sort((a,b)=>String(b.date).localeCompare(String(a.date))).slice(0,100);
- if(!x.length){tb.innerHTML='<tr><td colspan="9" class="empty">선택한 조건의 거래가 없습니다.</td></tr>';return}
- x.forEach(r=>tb.insertAdjacentHTML("beforeend",'<tr><td>'+r.date+'</td><td>'+r.region+'</td><td>'+r.union+'</td><td>'+(r.market||"-")+'</td><td><b>'+r.item+'</b></td><td>'+(r.state||"-")+'</td><td>'+kg(+r.weight)+'</td><td>'+won(+r.amount)+'</td><td class="price">'+won(+r.kg_price)+'</td></tr>'));
-}
-function render(){const r=filtered();metrics(r);summary(r);raw(r)}
 async function load(){
- const st=document.querySelector("#status");st.textContent="최신 데이터 불러오는 중…";
- try{const res=await fetch("https://raw.githubusercontent.com/he00210121-max/-/main/data.json?t="+Date.now(),{cache:"no-store"});if(!res.ok)throw new Error("HTTP "+res.status);DATA=await res.json();
-   st.textContent=(DATA.rows?.length||0).toLocaleString()+"건 · 마지막 수집 "+(DATA.updated_at||"-")+" · 15분 자동 갱신";
- }catch(e){st.textContent="데이터를 아직 불러오지 못했습니다. 잠시 후 새로고침해 주세요."}
- render();
+ $("#status").textContent="최신 공식자료 불러오는 중…";
+ try{
+   const r=await fetch("data.json?t="+Date.now(),{cache:"no-store"}); if(!r.ok)throw new Error(r.status);
+   DATA=await r.json(); items(); render();
+   const wc=(DATA.wholesale||[]).length, lc=(DATA.local||[]).length;
+   $("#status").textContent="도매 "+wc+"건 · 현지 "+lc+"건 · 마지막 갱신 "+(DATA.updated_at||"-");
+ }catch(e){
+   DATA={wholesale:[],local:[]}; items(); render();
+   $("#status").textContent="공식 데이터 파일을 아직 갱신하지 못했습니다. 잠시 후 새로고침해 주세요.";
+ }
 }
-document.querySelector("#region").onchange=render;document.querySelector("#reload").onclick=load;makeChips();load();setInterval(load,300000);
+$("#item").addEventListener("change",render);
+$("#reload").addEventListener("click",load);
+load(); setInterval(load,300000);
 </script>
 </body></html>
