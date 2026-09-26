@@ -1,8 +1,14 @@
 name: update seafood prices
 on:
   workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - "updater.py"
+      - "requirements.txt"
+      - ".github/workflows/update-prices.yml"
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "17,47 * * * *"
 permissions:
   contents: write
 jobs:
@@ -21,5 +27,5 @@ jobs:
           git config user.name "seafood-price-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data.json
-          git diff --cached --quiet || git commit -m "data: refresh KMI auction prices"
+          git diff --cached --quiet || git commit -m "data: refresh seafood prices"
           git push
