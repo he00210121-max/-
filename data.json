@@ -1,1 +1,1 @@
-{"updated_at":null,"source":"https://fishdata.kmi.re.kr/front/kmisys/prdlcCttmltDataList.do","rows":[]}
+{"updated_at":null,"wholesale_date":null,"wholesale":[],"local":[],"sources":{"wholesale":"https://www.kamis.or.kr/customer/price/wholesale/catalogue.do","local":"https://fishdata.kmi.re.kr/front/kmisys/prdlcCttmltDataList.do"},"errors":{"wholesale":[],"local":[]}}
