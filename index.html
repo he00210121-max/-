@@ -118,7 +118,7 @@ function raw(rows){
 function render(){const r=filtered();metrics(r);summary(r);raw(r)}
 async function load(){
  const st=document.querySelector("#status");st.textContent="최신 데이터 불러오는 중…";
- try{const res=await fetch("data.json?t="+Date.now(),{cache:"no-store"});if(!res.ok)throw new Error("HTTP "+res.status);DATA=await res.json();
+ try{const res=await fetch("https://raw.githubusercontent.com/he00210121-max/-/main/data.json?t="+Date.now(),{cache:"no-store"});if(!res.ok)throw new Error("HTTP "+res.status);DATA=await res.json();
    st.textContent=(DATA.rows?.length||0).toLocaleString()+"건 · 마지막 수집 "+(DATA.updated_at||"-")+" · 15분 자동 갱신";
  }catch(e){st.textContent="데이터를 아직 불러오지 못했습니다. 잠시 후 새로고침해 주세요."}
  render();
